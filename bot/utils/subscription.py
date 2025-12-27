@@ -22,9 +22,10 @@ async def force_sub_required(client, message):
     keyboard_rows = []     # final reply keyboard
 
     valid_status = {
-        ChatMemberStatus.MEMBER,
-        ChatMemberStatus.ADMINISTRATOR,
-        ChatMemberStatus.OWNER
+    ChatMemberStatus.MEMBER,
+    ChatMemberStatus.ADMINISTRATOR,
+    ChatMemberStatus.OWNER,
+    ChatMemberStatus.PENDING   # 🔥 THIS LINE
     }
 
     async def check(ch):
