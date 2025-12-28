@@ -138,6 +138,6 @@ async def start_handler(client: Client, message: Message):
         )
 
         if Config.START_PIC:
-            await message.reply_photo(photo=Config.START_PIC, caption=caption, reply_markup=buttons, quote=True)
+            await message.reply_photo(photo=Config.START_PIC, caption=caption, reply_markup=buttons)
         else:
-            await message.reply_text(text=caption, reply_markup=buttons, disable_web_page_preview=True, quote=True)
+            await message.reply_text(text=caption, reply_markup=buttons, disable_web_page_preview=True)
