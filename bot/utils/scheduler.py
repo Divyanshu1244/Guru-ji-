@@ -32,7 +32,7 @@ class ScheduleManager:
             await client.delete_messages(chat_id=chat_id, message_ids=chunk)
 
         retrieve_button = InlineKeyboardMarkup([
-            [InlineKeyboardButton("🗂 Retrieve Deleted File(s)", url=f"https://t.me/{client.me.username}?start={base64_file_link}")]
+            [InlineKeyboardButton("📢Join Backup Channel", url=f"https://t.me/+FkReusMf7r44Nzhl")]
         ])
         await client.send_message(
             chat_id=chat_id,
