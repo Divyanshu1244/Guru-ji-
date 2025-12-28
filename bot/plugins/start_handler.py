@@ -23,9 +23,34 @@ async def start_handler(client: Client, message: Message):
     if not await force_sub_required(client, message):
         return
 
-    if len(message.command) > 1:
-        param = message.command[1]
+if len(message.command) > 1:
+    param = message.command[1]
 
+    # 🔔 LOG: Link Opened (to LOG CHANNEL)
+    try:
+        user = message.from_user
+        username = f"@{user.username}" if user.username else "No username"
+
+        log_text = (
+            "🔗 <b>Link Opened</b>\n\n"
+            f"👤 <b>Name:</b> {user.first_name}\n"
+            f"🆔 <b>User ID:</b> <code>{user.id}</code>\n"
+            f"🔗 <b>Username:</b> {username}"
+        )
+
+        await client.send_message(
+            chat_id=Config.LOG_CHANNEL,
+            text=log_text,
+            parse_mode=ParseMode.HTML
+        )
+    except Exception:
+        pass
+
+    # ✅ New style verification: /start verify-USERID-TOKEN
+    if param.startswith("verify-"):
+        parts = param.split("-", 2)
+        ...
+        
         # ✅ New style verification: /start verify-USERID-TOKEN
         if param.startswith("verify-"):
             parts = param.split("-", 2)
