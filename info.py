@@ -30,7 +30,7 @@ class Config(object):
 
     # Messages
     START_PIC = getenv("START_PIC", "")
-    START_MSG = getenv("START_MESSAGE", "<b>Dude channel vali link use kar video ke liye👇\nChannel:- t.me/+_FVPR7qaQuRhYmY1\n<code>Join bhi karliyo bhai 😄</code></b>,")
+    START_MSG = getenv("START_MESSAGE", "<b>Get video links from channel.😊\n👉 Channel: http://t.me/+_FVPR7qaQuRhYmY1,")
     FORCE_MSG = getenv("FORCE_SUB_MESSAGE", "🚫 <b>Phele channel Join to karle babu !</b>\n\n Phir dekh aram se video  😋")
     CUSTOM_CAPTION = getenv("CUSTOM_CAPTION", None)
 
@@ -45,7 +45,7 @@ class Config(object):
     DISABLE_CHANNEL_BUTTON = getenv("DISABLE_CHANNEL_BUTTON", "False") == "True"
 
     AUTO_DELETE_TIME = int(getenv("AUTO_DELETE_TIME", "0"))
-    AUTO_DELETE_MSG = getenv("AUTO_DELETE_MSG", "️ <b>Note:</b> Files will be automatically delete after <b>30 Minutes</b>.")
+    AUTO_DELETE_MSG = getenv("AUTO_DELETE_MSG", "️ <b>Note:</b> Files delete automatically after <b>30 Minutes</b>.")
     AUTO_DEL_SUCCESS_MSG = getenv("AUTO_DEL_SUCCESS_MSG", "✅ File deleted successfully.")
 
     # Token Verification (Shortlink)
