@@ -10,9 +10,9 @@ async def about_callback(client, query: CallbackQuery):
     text = f"""
 <b>✨ Chatmola hai pardhan </b>
 
-👨‍💻 <b>Developer:</b> <a href='tg://user?id={Config.OWNER_ID}'>This Person</a>
-📢 <b>Backup Channel:</b> <a href='https://t.me/+KLY3ssrtdNY4MjM1'>𝙏𝙃𝙀 𝙋𝙎 𝘽𝙊𝙏𝙎</a>
-💬 <b>Support:</b> <a href='https://t.me/Cutehubsupport_bot'>𝙋𝙎 - 𝘿𝙄𝙎𝘾𝙐𝙎𝙎𝙄𝙊𝙉</a>
+👨‍💻 <b>Developer:</b> <a href='tg://user?id={Config.OWNER_ID}'>Sanju</a>
+📢 <b>Backup Channel:</b> <a href='https://t.me/+KLY3ssrtdNY4MjM1'>Join Now</a>
+💬 <b>Support:</b> <a href='https://t.me/Cutehubsupport_bot'>Support hub</a>
 """
     await query.message.edit_text(
         text=text,
