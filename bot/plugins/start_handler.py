@@ -137,18 +137,8 @@ buttons = InlineKeyboardMarkup([
         id=user_id  
     )  
 
-    if Config.START_PIC:  
-await client.send_photo(  
-    chat_id=message.chat.id,  
-    photo=Config.START_PIC,  
-    caption=caption,  
-    reply_markup=buttons  
-)
+    if Config.START_PIC:
+            await message.reply_photo(photo=Config.START_PIC, caption=caption, reply_markup=buttons, quote=True)
+        else:
+            await message.reply_text(text=caption, reply_markup=buttons, disable_web_page_preview=True, quote=True)
 
-else:
-await client.send_message(
-chat_id=message.chat.id,
-text=caption,
-reply_markup=buttons,
-disable_web_page_preview=True
-)
