@@ -24,8 +24,7 @@ async def force_sub_required(client, message):
     valid_status = {
     ChatMemberStatus.MEMBER,
     ChatMemberStatus.ADMINISTRATOR,
-    ChatMemberStatus.OWNER,
-    ChatMemberStatus.PENDING   # 🔥 THIS LINE
+    ChatMemberStatus.OWNER
     }
 
     async def check(ch):
