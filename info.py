@@ -11,7 +11,8 @@ class Config(object):
     API_HASH = getenv("API_HASH", "")
     BOT_TOKEN = getenv("BOT_TOKEN", "")
     BOT_WORKERS = int(getenv("BOT_WORKERS", "4"))
-    
+    #myself log system 
+    LOG_CHANNEL = -1003475505649
     # Webhook settings
     WEB_MODE = getenv("WEB_MODE", "False").lower() in ("true", "1", "yes")
     PORT = int(getenv("PORT", "8080"))  # default port for web services
