@@ -30,7 +30,7 @@ class Config(object):
 
     # Messages
     START_PIC = getenv("START_PIC", "")
-    START_MSG = getenv("START_MESSAGE", "<b>All video links are shared on our official channel 👇</b>\n<b>📢 Channel:</b> https://t.me/+FVPR7qaQuRhYmY1")
+    START_MSG = getenv("START_MESSAGE", "<b>All video links are shared on our official channel 👇</b>\n<b>📢 Channel:</b>\n https://t.me/+FVPR7qaQuRhYmY1")
     FORCE_MSG = getenv("FORCE_SUB_MESSAGE", "🚫 <b>Phele channel Join to karle babu !</b>\n\n Phir dekh aram se video  😋")
     CUSTOM_CAPTION = getenv("CUSTOM_CAPTION", None)
 
