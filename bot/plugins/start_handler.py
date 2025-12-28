@@ -123,32 +123,32 @@ async def start_handler(client: Client, message: Message):
             )
     else:
         # Start Message / No Params
-buttons = InlineKeyboardMarkup([
-    [
-        InlineKeyboardButton("😊 About Me", callback_data="about"),
-        InlineKeyboardButton("🔒 Close", callback_data="close")
-    ]
-])
+buttons = InlineKeyboardMarkup([  
+        [  
+            InlineKeyboardButton("😊 About Me", callback_data="about"),  
+            InlineKeyboardButton("🔒 Close", callback_data="close")  
+        ]  
+    ])  
+    caption = Config.START_MSG.format(  
+        first=message.from_user.first_name,  
+        last=message.from_user.last_name,  
+        username="@" + message.from_user.username if message.from_user.username else None,  
+        mention=message.from_user.mention,  
+        id=user_id  
+    )  
 
-caption = Config.START_MSG.format(
-    first=message.from_user.first_name,
-    last=message.from_user.last_name,
-    username="@" + message.from_user.username if message.from_user.username else None,
-    mention=message.from_user.mention,
-    id=user_id
+    if Config.START_PIC:  
+await client.send_photo(  
+    chat_id=message.chat.id,  
+    photo=Config.START_PIC,  
+    caption=caption,  
+    reply_markup=buttons  
 )
 
-if Config.START_PIC:
-    await client.send_photo(
-        chat_id=message.chat.id,
-        photo=Config.START_PIC,
-        caption=caption,
-        reply_markup=buttons
-    )
 else:
-    await client.send_message(
-        chat_id=message.chat.id,
-        text=caption,
-        reply_markup=buttons,
-        disable_web_page_preview=True
-    )
+await client.send_message(
+chat_id=message.chat.id,
+text=caption,
+reply_markup=buttons,
+disable_web_page_preview=True
+)
